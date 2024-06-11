@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta lang="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Toast1e's Tech Tales</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="/assets/images/resources/ico/dove.ico"
+      type="image/ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="poppins-regular">
+    <h1 class="poppins-bold">Toast1e's Tech Tales</h1>
+    <h2 class="poppins-bold">Toast1e's Modular Counter</h2>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img
+            class="pixel-art"
+            alt=""
+            style="height: 40px; image-rendering: pixelated"
+            src="/assets/images/resources/dove.png"
+          />
+          <!-- <a href="/index.html">My Blog</a> -->
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="/assets/pages/misc/about.html">About</a>
+          <a href="/assets/pages/misc/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <hr width="70%" />
+    <br />
+    <section>
+      <p>
+        I'm creating this counter to act as an experiment if you will. The idea
+        is to test relay-logic and practice PCB design and soldering on this
+        Relay Counter Project, before moving on to build a Relay Computer. I
+        might even use this counter in the Relay Computer Project.
+      </p>
+      <!-- <p>I'll take this time to sharpen my skills in software such as Logisim-Evolution, KiCAD and any other skill required ...</p> -->
+      <p>
+        <strong>The Vision:</strong> Create a
+        <strong>Tower of Adders</strong> that can combine two 8-bit binary
+        numbers to give a 16-bit result. The Adders should be
+        <strong>Modular</strong> for the possibility of adding larger numbers in
+        the future. <strong>Custom PCB</strong> designs. I want a
+        <strong>Decoder Card</strong> I can plug into the Adder Stack that
+        decodes the binary and displays numbers most of us can read...
+      </p>
+    </section>
+    <iframe
+      title="Adder Design"
+      class="clickable-article"
+      src="https://my.spline.design/draganddropsnapcopy-60d2be52aae8454ba2cbfb25ca8fb14b/"
+      width="50%"
+      height="300px"
+    ></iframe>
+    <section>
+      We start at the most basic counter in binary. Using an AND logic-gate with
+      a XOR logic-gate, we can combine them to create a
+      <strong>Half-Adder</strong>. The output in this case is the Sum (S) or a
+      Carry (C). This Half-Adder takes in 2 inputs (A,B) and adds them. If both
+      inputs are 1, the sum should be 0 with the carry to be 1. I won't be
+      explaining binary in this project, but you can find all my resources
+      <a href="/assets/pages/misc/about.html">here</a>.
+    </section>
+
+    <div class="img-container">
+      <img src="/assets/images/adder/Half_Adder.png" alt="Half-Adder" />
+    </div>
+    <br />
+    <section>
+      Now that we have a Half-Adder we can start counting one bit, but what if
+      we need to count 2 bits with the Carry value from the previous sum. This
+      is where we create a <strong>Full-Adder</strong>. It is essentially two
+      Half-Adders connected with an OR logic-gate to take in 2 input values(A,
+      B), and a carry (Cin) and produce the sum (Sum) and a carry value (Cout)
+    </section>
+    <div class="img-container">
+      <img src="/assets/images/adder/Full_Adder.png" alt="Full-Adder" />
+    </div>
+    <br />
+    <section>
+      With the Full-Adder done we can chain these together to make the 8-bit
+      input for A-input, B-input and combine these for a 16-bit Sum output.
+    </section>
+    <div class="img-container">
+      <img src="/assets/images/adder/viiibit_ADDER.png" alt="16-bit Adder" />
+    </div>
+    <hr width="70%" />
+    <center><p>© 2024 Christiaan Botha</p></center>
+  </body>
+</html>
